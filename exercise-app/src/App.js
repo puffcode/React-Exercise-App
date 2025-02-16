@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import GlobalStyle from "./styles";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <div className="App">
+        <header className="App-header">
+          <h1>Select an Exercise</h1>
+          <div className="exercise-buttons">
+            <button className="exercise-button">Push-ups</button>
+            <button className="exercise-button">Running</button>
+            <button className="exercise-button">Plank</button>
+            <button className="exercise-button">Squat</button>
+          </div>
+        </header>
+      </div>
+    </>
   );
 }
 

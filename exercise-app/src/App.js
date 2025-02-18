@@ -24,6 +24,7 @@ function App() {
       <GlobalStyle />
       <div className="App">
         <header className="App-header">
+          {!selectedExercise && <h1 className="home-header">HOME</h1>}
           {selectedExercise ? (
             isDurationExercise(selectedExercise) ? (
               <Duration name={selectedExercise} onBackClick={handleBackClick} />
@@ -35,7 +36,7 @@ function App() {
             )
           ) : (
             <>
-              <h1>Select an Exercise</h1>
+              <h1 className="exercise-header">Select an Exercise</h1>
               <div className="exercise-buttons">
                 <button
                   className="exercise-button"

@@ -7,6 +7,10 @@ const RepetitionExercise = ({ exercise }) => {
     setCount(count + 1);
   };
 
+  const handleReset = () => {
+    setCount(0);
+  };
+
   const getUnit = (exercise) => {
     switch (exercise) {
       case "Push-ups":
@@ -14,7 +18,7 @@ const RepetitionExercise = ({ exercise }) => {
       case "Running":
         return "laps";
       case "Plank":
-        return "seconds";
+        return "reps";
       case "Squat":
         return "reps";
       default:
@@ -29,6 +33,7 @@ const RepetitionExercise = ({ exercise }) => {
         {count} {getUnit(exercise)}
       </p>
       <button onClick={handleIncrement}>Increase</button>
+      <button onClick={handleReset}>Reset</button>
     </div>
   );
 };
